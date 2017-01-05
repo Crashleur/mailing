@@ -1,6 +1,9 @@
 <?php
 require 'PHPMailerAutoload.php';
+include 'variables.php';
 
+var_dump($password);
+/*
 $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -29,3 +32,4 @@ if(!$mail->send()) {
 } else {
     echo 'Message has been sent';
 }
+*/
