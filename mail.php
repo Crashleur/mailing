@@ -13,8 +13,6 @@ $req = $bdd->prepare('SELECT * FROM usermail');
 $req->execute();
 while($dest = $req->fetch()){
 
-    var_dump(strstr($dest['email'],'gmail') != false);
-    /*
     $mail = new PHPMailer;
 
     //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -43,5 +41,4 @@ while($dest = $req->fetch()){
     } else {
         echo 'Message has been sent';
     }
-  */
 }
