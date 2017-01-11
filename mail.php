@@ -20,12 +20,12 @@ while($dest = $req->fetch()){
     $mail->isSMTP();                                  // Set mailer to use SMTP
     $mail->Host = 'smtp.live.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'clara.bouyer45@live.fr';                 // SMTP usernametyjgy
-    $mail->Password = '';                           // SMTP password
+    $mail->Username = $usermail;                 // SMTP usernametyjgy
+    $mail->Password = $password;                           // SMTP password
     $mail->SMTPSecure = 'tsl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
-    $mail->setFrom('clara.bouyer45@live.fr', 'Admin');
+    $mail->setFrom($usermail, 'Admin');
     $mail->addAddress('clara.bouyer45@live.fr', 'Picard');     // Add a recipient
     $mail->addReplyTo('clara.bouyer45@live.fr', 'Information');
 
