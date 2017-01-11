@@ -45,8 +45,10 @@ while($dest = $envoi->fetch()){
     $mail->isHTML(true);                                  // Set email format to HTML (TRUE)
 
     $mail->Subject = 'Bonjour '.$dest['prenom'].' '.$dest['nom'];
-    $mail->Body    = '<p>Voici mon envoi de mail personnel !</>';
+    $mail->Body    = '<p>Voici mon envoi de mail personnel !</p><p>Et voici mon dépôt GIT : https://github.com/Crashleur/mailing</p><p>à cause d\'un problème avec mon Gmail,'.
+    'je vous envoi ce mail depuis celui d\'une camarade.<p>Bien à vous</p><br><p><b>Quentin Picard</b></p>';
     if(!$mail->send()) {
+      //Problème avec l'incrémentation de l'erreur !
         echo 'Le message ne peut pas être envoyé';
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
